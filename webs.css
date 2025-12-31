@@ -1,0 +1,234 @@
+.divv {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url(https://cdn.regent.edu/wp-content/uploads/2024/12/ai-in-education-certificate-regent-university-hero-720x405.jpg.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    padding: 80px 50px;
+    color: white;
+    overflow: hidden;
+}
+
+/* DARK OVERLAY */
+.divv::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.4)
+    );
+    z-index: 1;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.divv * {
+    position: relative;
+    z-index: 2;
+}
+
+/* HERO TEXT ANIMATION */
+.divv h1 {
+    animation: slideDown 1.2s ease forwards;
+}
+
+.divv p {
+    animation: fadeUp 1.5s ease forwards;
+}
+
+/* KEYFRAMES */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-buttons button {
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.hero-buttons button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.hero-buttons .secondary {
+    background-color: rgb(107, 107, 25);
+    border: 2px solid white;
+}
+
+.hero-buttons .secondary:hover {
+    background: white;
+    color: black;
+}
+.section h2 {
+    font-size: 32px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.section h2::after {
+    content: "";
+    width: 0%;
+    height: 4px;
+    background: #ff9800;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transition: 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.section:hover h2::after {
+    width: 80%;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 15px 0;
+}
+
+/* ENROLL BUTTON */
+.enroll-btn {
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* BUTTON HOVER */
+.enroll-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* CARD ENHANCEMENT */
+.card {
+    text-align: center;
+    border-style:groove;
+    border-radius: 40px;
+    padding: 20px;
+}
+.card-container {
+    gap: 50px;
+    display: flex;
+    justify-content: space-around 700px;
+    flex-wrap: wrap;
+    border-radius: 40px;
+    padding: 20px;
+    border-style: double;
+}
+
+.card:hover .price {
+    color: #0a1f44;
+}
+
+.why-list li {
+    font-size: 18px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.why-list li:hover {
+    transform: translateX(10px);
+    color: #ff9800;
+}
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    animation: floatForm 4s ease-in-out infinite;
+}
+
+@keyframes floatForm {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.contact-form button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+.contact-form {
+    max-width: 500px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-form button {
+    background: #0a1f44;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #08306b;
+}
+footer {
+    background: #0a1f44;
+    color: white;
+    padding: 15px;
+    transition: 0.4s;
+    text-align: center;
+}
+
+footer:hover {
+    box-shadow: 0 -5px 25px rgba(255,152,0,0.5);
+}
