@@ -232,3 +232,56 @@ footer {
 footer:hover {
     box-shadow: 0 -5px 25px rgba(255,152,0,0.5);
 }
+/* =========================
+   MOBILE (max-width: 576px)
+========================= */
+@media (max-width: 576px) {
+
+    /* HERO SECTION */
+    .divv {
+        padding: 60px 20px;
+        min-height: 70vh;
+    }
+
+    .divv h1 {
+        font-size: 36px !important;
+        line-height: 1.2;
+    }
+
+    .divv p {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons button {
+        width: 100%;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 40px 20px;
+    }
+
+    /* COURSE CARDS */
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .enroll-btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
